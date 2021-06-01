@@ -34,8 +34,8 @@ class Shoes extends Products {
 
 $model_1 = new Shoes('Sneakers', 'D&G', 250, 'Sneakers-Portofino', 'Scarpa in vera pelle...', 5);
 
-var_dump($model_1);
+// var_dump($model_1);
 
 $model_2 = new Shoes('Stringate', 'D&G', 250, 'Derby Intreccio a mano', 'Scarpa in vera pelle...', 5);
 
-var_dump($model_2);
+// var_dump($model_2);

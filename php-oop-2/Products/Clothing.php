@@ -34,8 +34,8 @@ class Clothing extends Products{
 
 $model_3 = new Clothing('T-shirt', 'D&G', 350, 'T-shirt Flower Jersey', 'Cotone 100% made in Italy...', 5);
 
-var_dump($model_3);
+// var_dump($model_3);
 
 $model_4 = new Clothing('Camicia', 'D&G', 250, 'Camicia Flower Jersey', 'Cotone made in Italy...', 5);
 
-var_dump($model_4);
+// var_dump($model_4);

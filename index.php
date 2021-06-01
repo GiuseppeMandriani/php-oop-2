@@ -1,8 +1,14 @@
 <?php // Import Data
 
+// Products
+
 require_once __DIR__ . '/php-oop-2/Products/Shoes.php';
 require_once __DIR__ . '/php-oop-2/Products/Clothing.php';
 require_once __DIR__ . '/php-oop-2/Products/Bags.php';
+
+// USERS
+
+require_once __DIR__ . '/php-oop-2/Users/Users.php';
 
 ?>
 
@@ -26,6 +32,17 @@ require_once __DIR__ . '/php-oop-2/Products/Bags.php';
     <header>
         <h1>My E-Commerce</h1>
     </header>
+
+    <main>
+        <!-- User Log -->
+        <section>
+        <?php // Istanza Utente
+            $user_1 = new Users('Giuseppe','Mandriani','Premium');?>
+            <h2>Welcome in your page <?php echo $user_1->getFullName();?></h2>
+            <h4>Your Discount is: <?php echo $user_1->getSale() ?> </h4>
+        </section>
+    
+    </main>
 
 </body>
 

@@ -33,8 +33,8 @@ class Bags extends Products{
 
 $model_5 = new Bags('Bags', 'D&G', 350, 'Borsa da Viaggio', 'Pratica e sofisticata, la borsa viaggio realizzata in cocco', 5);
 
-var_dump($model_5);
+// var_dump($model_5);
 
 $model_6 = new Bags('Bags', 'D&G', 250, 'Pochette', 'Pochette della linea Mediterraneo in vitello con logo a fuoco', 5);
 
-var_dump($model_6);
+// var_dump($model_6);
