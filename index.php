@@ -1,7 +1,8 @@
 <?php // Import Data
 
-require_once __DIR__ . '/Shoes.php';
-require_once __DIR__ . '/Clothing.php';
+require_once __DIR__ . '/php-oop-2/Products/Shoes.php';
+require_once __DIR__ . '/php-oop-2/Products/Clothing.php';
+require_once __DIR__ . '/php-oop-2/Products/Bags.php';
 
 ?>
 
