@@ -1,6 +1,7 @@
 <?php // Import Data
 
 require_once __DIR__ . '/Shoes.php';
+require_once __DIR__ . '/Clothing.php';
 
 ?>
 

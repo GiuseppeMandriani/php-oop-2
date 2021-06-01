@@ -4,18 +4,21 @@
 require_once __DIR__ . '/Products.php';
 require_once __DIR__ . '/trait.php';
 
+
 /**
-*   CLASS SHOES (Classe Figlia)
+*   CLASS CLOTHING (Classe Figlia)
 */
 
-class Shoes extends Products {
+class Clothing extends Products{
     // Attributi/Proprietà
     // protected $name;
     // protected $descriptions;
     // protected $review;
 
+    // Trait
     use Details;
 
+    
     //Construct
 
     function __construct($type,$brand,$price,$name,$descriptions,$review){
@@ -24,18 +27,15 @@ class Shoes extends Products {
         $this->descriptions = $descriptions;
         $this->review = $review;
     }
-
-
-
-    //Methods
 }
+
 
 // Istanze
 
-$model_1 = new Shoes('Sneakers', 'D&G', 250, 'Sneakers-Portofino', 'Scarpa in vera pelle...', 5);
+$model_3 = new Clothing('T-shirt', 'D&G', 350, 'T-shirt Flower Jersey', 'Cotone 100% made in Italy...', 5);
 
-var_dump($model_1);
+var_dump($model_3);
 
-$model_2 = new Shoes('Stringate', 'D&G', 250, 'Derby Intreccio a mano', 'Scarpa in vera pelle...', 5);
+$model_4 = new Clothing('Camicia', 'D&G', 250, 'Camicia Flower Jersey', 'Cotone made in Italy...', 5);
 
-var_dump($model_2);
+var_dump($model_4);
