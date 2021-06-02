@@ -5,7 +5,8 @@
 
 trait Details{
     // Attributi/Proprietà
-    protected $name;
-    protected $descriptions;
-    protected $review;
+    public $name;
+    public $descriptions;
+    public $review;
+    public $img;
 }

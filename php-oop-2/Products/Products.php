@@ -6,8 +6,8 @@
 
 class Products {
     // Attributi/Proprietà/Valori
-    protected $type;
-    protected $brand;
+    public $type;
+    public $brand;
     protected $price;
 
 
@@ -21,6 +21,7 @@ class Products {
     }
 
     // Methods
+
 }
 
 
