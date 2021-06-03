@@ -10,15 +10,15 @@ class Users{
 
     protected $firstName;
     protected $lastName;
-    protected $category;
+    protected $age;
     protected $sale;
 
     // Construct
 
-    function __construct($firstName, $lastName, $category = 'Premium'){
+    function __construct($firstName, $lastName, $age){
         $this->firstName = $firstName;
         $this->lastName = $lastName;
-        $this->category = $category;
+        $this->age = $age;
     }
 
     // Methods
@@ -36,11 +36,7 @@ class Users{
     */
 
     protected function setSale(){
-        if($this->category == 'Premium'){
-            $this->sale = 50 .'%';
-        } else{
-            $this->sale = 'Not Discount';
-        }
+        $this->sale = $this->age > 40 ? 30 : 'Not Discount';
         
     }
 
@@ -54,6 +50,10 @@ class Users{
 
         return $this->sale;
     }
+
+
+
+
 
 
 

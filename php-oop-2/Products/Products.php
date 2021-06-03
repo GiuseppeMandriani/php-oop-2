@@ -8,19 +8,32 @@ class Products {
     // Attributi/Proprietà/Valori
     public $type;
     public $brand;
-    protected $price;
+    public $price;
+    public $salePrice;
 
 
 
     // Costruct per inizio
     
-    function __construct($type,$brand,$price){
+    function __construct($type,$brand,$price,$salePrice){
         $this->type = $type;
         $this->brand = $brand;
         $this->price = $price;
+        $this->salePrice = $salePrice;
     }
 
     // Methods
+
+    //metodo sconto
+    public function getSalePrice($sale){
+        $salePrice = $this->price - ($this->price * ($sale/ 100));
+
+        return number_format($salePrice, 2);
+    }
+
+
+
+
 
 }
 
