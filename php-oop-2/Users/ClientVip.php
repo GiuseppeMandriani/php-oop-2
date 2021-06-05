@@ -3,7 +3,7 @@
 require_once __DIR__ . '/Users.php';
 
 /**
-*   CLien Vip Class (Classe Figlia)
+*   CLiet Vip Class (Classe Figlia)
 */
 
 class ClientVip extends Users{

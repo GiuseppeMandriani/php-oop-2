@@ -14,14 +14,73 @@ body {
     margin: 0 auto;
 }
 
+
+/* UTILITIES */
+
+/* Buttons */
+
+.btn-shop {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+
+}
+
+.btn-hearth {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 4%;
+    right: 7%;
+    transform: translate(-5%, -5%);
+    font-size: 1rem;
+    transition: .3s;
+    color: #35455b;
+
+
+
+}
+
+.btn-hearth:hover {
+    transform: scale(1.2);
+}
+
+.btn-hearth:active {
+    color: red;
+}
+
+.btn-chart {
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 78%;
+    right: 4%;
+    transform: translate(-5%, -5%);
+    font-size: 1rem;
+    transition: .3s;
+    z-index: 1;
+    color: #35455b;
+
+
+}
+
+.btn-chart:hover {
+    transform: scale(1.2);
+}
+
 /* HEADER */
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 20px;
-    background-color: dodgerblue;
+
     height: 80px;
+    border-bottom: 1px solid #eee;
 
 }
 
@@ -32,15 +91,30 @@ body {
 .box-shop {
     position: absolute;
     width: 250px;
-    top: 50px;
+    top: 55px;
     right: -5px;
-    background-color: #ccc;
+    padding: 10px;
+    background-color: #fff;
+    border: 1px solid #eee;
+    z-index: 1;
 }
 
 
 
 
 /* MAIN */
+
+/* Jumbotron */
+
+.jumbotron {
+    width: 100%;
+    padding: 0 10px;
+
+}
+
+.jumbotron img {
+    width: 100%;
+}
 
 
 /* User-log */
@@ -53,6 +127,11 @@ body {
     /* background-color: aquamarine; */
 }
 
+.user-log h2 {
+    text-transform: uppercase;
+    margin-bottom: .8rem;
+}
+
 
 
 
@@ -60,24 +139,48 @@ body {
 .products {
     display: flex;
     flex-direction: column;
+    /* margin: 1rem 0; */
     /* justify-content: center; */
+}
+
+.products h3 {
+    margin: 1rem 0;
+    border-bottom: 1px solid #ccc;
 }
 
 .row {
     display: flex;
+    margin: 1rem 0;
 }
 
 .cards {
     flex-basis: calc(100% / 3 - 30px);
     margin: 0 15px;
     /* background-color: blue; */
+    position: relative;
+    transition: .3s;
 }
 
 .cards img {
     width: 100%;
 }
 
+.cards:hover .btn-hearth,
+.cards:hover .btn-chart {
+    display: block;
+
+}
+
+/* .cards img:hover button.btn-chart {
+    opacity: 1;
+
+} */
+
 .list-products {
     list-style: none;
+    font-size: .8rem;
+}
 
+.discount-price {
+    text-decoration: line-through;
 }

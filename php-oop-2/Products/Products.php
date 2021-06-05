@@ -31,6 +31,12 @@ class Products {
         return number_format($salePrice, 2);
     }
 
+    // Tot da Pagare
+
+     public function totPrice(){
+         var_dump($this->price);
+     }
+
 
 
 

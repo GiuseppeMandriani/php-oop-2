@@ -35,17 +35,19 @@ require_once __DIR__ . '/php-oop-2/Users/ClientVip.php';
 <body>
     <div id="app">
         <header class="header">
-            <h1>My E-Commerce</h1>
+        <img src="https://www.dolcegabbana.com/on/demandware.static/-/Library-Sites-Dolcegabbana/default/dwafa794eb/menu-logo.svg" alt="">
 
             <?php // Istanza ClientVip
-                $clientVip_1 = new ClientVip('Giuseppe','Mandriani',45,1);?>
+                $clientVip_1 = new ClientVip('Giuseppe','Mandriani',30,4);?>
 
 
             <div class="shop">
+            <button class="btn-shop">
                 <i class="fas fa-shopping-cart"></i>
+            </button>
                 <div class="box-shop">
                     <h5>Articoli nel carrello</h5>
-                    <h6>Prezzo:</h6>
+                    <h6 id="price">Prezzo: </h6>
                     <h6>Sconto: <?php echo $clientVip_1->getSale() ?>%</h6>
                     <?php
                     $totPrice = 0?>
@@ -53,16 +55,20 @@ require_once __DIR__ . '/php-oop-2/Users/ClientVip.php';
                 </div>
             </div>
         </header>
-        <main class="container">
+        <main class="">
             <!-- User Log -->
 
-            <section class="user-log">
+            <section class="user-log container">
                 <h2>Welcome in your page <?php echo $clientVip_1->getFullName();?></h2>
                 <h4>Your Discount is: <?php echo $clientVip_1->getSale() ?>% </h4>
         
             </section>
+
+            <section class="jumbotron container">
+                <img src="https://www.dolcegabbana.com/on/demandware.static/-/Library-Sites-Dolcegabbana/default/dw9c7443fd/pageimages/listing/MenLanding/1-new.jpg" alt="">
+            </section>
             <!-- Products -->
-            <section class="products">
+            <section class="products container">
                 <h3>SHOES</h3>
                 <div class="row">
                     <!-- SHOES -->
@@ -70,14 +76,15 @@ require_once __DIR__ . '/php-oop-2/Users/ClientVip.php';
                     foreach($shoes as $key =>$scarpa){?>
                     <div class="cards">
                     <img src="<?php echo $scarpa->img?>" alt="">
+                    <button class="btn-hearth"><i class="far fa-heart"></i></button>
                         <ul class="list-products">
                             
                             <li><?php echo $scarpa->name?></li>
-                            <li><?php echo $scarpa->type?></li>
                             <li><?php echo $scarpa->brand?></li>
-                            <li><?php echo $scarpa->price?> €</li>
-                            <li><?php echo $scarpa->getSalePrice($clientVip_1->getSale())?> €</li>
+                            <li>Prezzo di listino: <span class="discount-price"><?php echo $scarpa->price?></span>  €</li>
+                            <li>Prezzo Riservato: <?php echo $scarpa->getSalePrice($clientVip_1->getSale())?> €</li>
                         </ul>
+                    <button class="btn-chart" id="add" onclick="addToChart(<?php echo $scarpa->price;?>)" ><i class="fas fa-shopping-cart"></i></button>
                     
                     </div>
                     <?php } ?>
@@ -89,13 +96,15 @@ require_once __DIR__ . '/php-oop-2/Users/ClientVip.php';
                     foreach ($clothings as $clothes) {?>
                     <div class="cards">
                     <img src="<?php echo $clothes->img?>" alt="">
+                    <button class="btn-hearth"><i class="far fa-heart"></i></button>
                         <ul class="list-products">
                             <li><?php echo $clothes->name?></li>
-                            <li><?php echo $clothes->type?></li>
                             <li><?php echo $clothes->brand?></li>
-                            <li><?php echo $clothes->price?> €</li>
-                            <li><?php echo $clothes->getSalePrice($clientVip_1->getSale())?> €</li>
+                            <li>Prezzo di listino: <span class="discount-price"><?php echo $clothes->price?></span>  €</li>
+                            <li>Prezzo Riservato: <?php echo $clothes->getSalePrice($clientVip_1->getSale())?> €</li>
+
                         </ul>
+                    <button class="btn-chart" id="add" onclick="addToChart(<?php echo $clothes->price;?>)" ><i class="fas fa-shopping-cart"></i></button>
                     </div>
                     <?php } ?>
                 </div>
@@ -106,13 +115,14 @@ require_once __DIR__ . '/php-oop-2/Users/ClientVip.php';
                     foreach ($bags as $bag) {?>
                     <div class="cards">
                     <img src="<?php echo $bag->img?>" alt="">
+                    <button class="btn-hearth"><i class="far fa-heart"></i></button>
                         <ul class="list-products">
                             <li><?php echo $bag->name?></li>
-                            <li><?php echo $bag->type?></li>
                             <li><?php echo $bag->brand?></li>
-                            <li><?php echo $bag->price?> €</li>
-                            <li><?php echo $bag->getSalePrice($clientVip_1->getSale())?> €</li>
+                            <li>Prezzo di listino: <span class="discount-price"><?php echo $bag->price?></span>  €</li>
+                            <li>Prezzo Riservato: <?php echo $bag->getSalePrice($clientVip_1->getSale())?> €</li>
                         </ul>
+                    <button class="btn-chart" id="add" onclick="addToChart(<?php echo $bag->price;?>)" ><i class="fas fa-shopping-cart"></i></button>
                     </div>
                     <?php } ?>
                 </div>
@@ -126,7 +136,7 @@ require_once __DIR__ . '/php-oop-2/Users/ClientVip.php';
 
 
 <!-- JS -->
-<script src="./js/main.js"></script>
+<script src="./js/script.js"></script>
 </body>
 
 </html>
