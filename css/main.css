@@ -127,10 +127,14 @@ body {
     /* background-color: aquamarine; */
 }
 
-.user-log h2 {
+.user-log h2,
+.user-log h4 {
     text-transform: uppercase;
     margin-bottom: .8rem;
+    font-weight: 400;
+    letter-spacing: 3px;
 }
+
 
 
 

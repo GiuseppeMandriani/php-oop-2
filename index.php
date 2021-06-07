@@ -34,8 +34,8 @@ require_once __DIR__ . '/php-oop-2/Users/ClientVip.php';
 
 <body>
     <div id="app">
-        <header class="header">
-        <img src="https://www.dolcegabbana.com/on/demandware.static/-/Library-Sites-Dolcegabbana/default/dwafa794eb/menu-logo.svg" alt="">
+            <header class="header">
+            <img src="https://www.dolcegabbana.com/on/demandware.static/-/Library-Sites-Dolcegabbana/default/dwafa794eb/menu-logo.svg" alt="">
 
             <?php // Istanza ClientVip
                 $clientVip_1 = new ClientVip('Giuseppe','Mandriani',30,4);?>
@@ -64,7 +64,7 @@ require_once __DIR__ . '/php-oop-2/Users/ClientVip.php';
         
             </section>
 
-            <section class="jumbotron container">
+            <section class="jumbotron">
                 <img src="https://www.dolcegabbana.com/on/demandware.static/-/Library-Sites-Dolcegabbana/default/dw9c7443fd/pageimages/listing/MenLanding/1-new.jpg" alt="">
             </section>
             <!-- Products -->
